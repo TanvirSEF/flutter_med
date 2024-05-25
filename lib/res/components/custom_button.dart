@@ -1,3 +1,5 @@
+
+
 import "../../consts/consts.dart";
 
 class CustomButton extends StatelessWidget {
@@ -14,7 +16,7 @@ class CustomButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           shape: const StadiumBorder(),
           backgroundColor: Colors.orange,
-          textStyle: const TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),
+          textStyle: const TextStyle(fontSize: 18,fontWeight: FontWeight.w600, color: Colors.white)
         ),
         onPressed: onTap,
         child: buttonText.text.make(),

@@ -1,5 +1,6 @@
-import 'package:doctime/consts/images.dart';
-import 'package:doctime/consts/strings.dart';
+
+
+import 'consts.dart';
 
 var iconsList = [
   AppAssets.ioBody,
@@ -16,4 +17,16 @@ var iconsTitleList = [
   AppStrings.lungs,
   AppStrings.heart,
   AppStrings.kidney,
+];
+
+var settingsList = [
+    AppStrings.changepassword,
+    AppStrings.termCondi,
+    AppStrings.signout,
+];
+
+var settingsListIcon = [
+  Icons.lock,
+  Icons.note,
+  Icons.logout,
 ];

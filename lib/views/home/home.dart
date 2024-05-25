@@ -3,6 +3,8 @@
 import 'package:doctime/consts/consts.dart';
 import 'package:doctime/consts/lists.dart';
 import 'package:doctime/res/components/custom_textfield.dart';
+import 'package:doctime/views/doctors_profile_view/doctors_profile_view.dart';
+import 'package:get/get.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -91,31 +93,36 @@ class Home extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemCount: 3,
                     itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        clipBehavior: Clip.hardEdge,
-                        decoration: BoxDecoration(
-                          color: AppColors.bgDarkColor,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        margin: const EdgeInsets.only(right: 8),
-                        height: 100,
-                        width: 150,
-                        child: Column(
-                          children: [
-                            Container(
-                              width: 150,
-                              alignment: Alignment.center,
-                              color : Colors.amber,
-                              child: Image.asset(
-                                AppAssets.imgsign,
-                                width: 100,
-                                fit: BoxFit.cover,
+                      return GestureDetector(
+                        onTap: (){
+                          Get.to(()=>const DoctorsProfileView());
+                        },
+                        child: Container(
+                          clipBehavior: Clip.hardEdge,
+                          decoration: BoxDecoration(
+                            color: AppColors.bgDarkColor,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          margin: const EdgeInsets.only(right: 8),
+                          height: 100,
+                          width: 150,
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 150,
+                                alignment: Alignment.center,
+                                color : Colors.amber,
+                                child: Image.asset(
+                                  AppAssets.imgsign,
+                                  width: 100,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            5.heightBox,
-                            AppStyles.normal(title: "Doctor Name"),
-                            AppStyles.normal(title: "Category",color: Colors.black54),
-                          ],
+                              5.heightBox,
+                              AppStyles.normal(title: "Doctor Name"),
+                              AppStyles.normal(title: "Category",color: Colors.black54),
+                            ],
+                          ),
                         ),
                       );
                     },

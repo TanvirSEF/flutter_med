@@ -1,6 +1,8 @@
 import 'package:doctime/consts/consts.dart';
 import 'package:doctime/views/category_view/category_view.dart';
 import 'package:doctime/views/home/home.dart';
+import 'package:doctime/views/login_view/login_view.dart';
+import 'package:doctime/views/settings/settings_view.dart';
 
 class Homee extends StatefulWidget {
   const Homee({super.key});
@@ -14,16 +16,8 @@ class _HomeeState extends State<Homee> {
   List screenList =[
      const Home(),
     const CategoryView(),
-    Container(
-      color: Colors.red,
-    ),
-    Container(
-      color: Colors.blue,
-    ),
-    Container(
-      color: Colors.amber,
-    ),
-
+    const LoginView(),
+    const SettingsView(),
   ];
   @override
   Widget build(BuildContext context) {
