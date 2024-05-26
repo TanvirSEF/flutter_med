@@ -1,4 +1,6 @@
 import 'package:doctime/consts/lists.dart';
+import 'package:doctime/views/category_details_view/category_details_view.dart';
+import 'package:get/get.dart';
 
 import '../../consts/consts.dart';
 
@@ -26,7 +28,9 @@ class CategoryView extends StatelessWidget {
           itemCount: iconsList.length,
           itemBuilder: (BuildContext context,                               int index){
           return GestureDetector(
-            onTap: (){},
+            onTap: (){
+              Get.to(()=> const CategoryDetailsView());
+            },
             child: Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(

@@ -1,5 +1,8 @@
 import 'package:doctime/consts/consts.dart';
 import 'package:doctime/res/components/custom_button.dart';
+import 'package:doctime/views/appointment_view/appointment.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class DoctorsProfileView extends StatelessWidget {
   const DoctorsProfileView({super.key});
@@ -100,7 +103,9 @@ class DoctorsProfileView extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: CustomButton(buttonText: "Book an appointment", onTap: (){},),
+        child: CustomButton(buttonText: "Book an appointment", onTap: (){
+          Get.to(()=>const Appointment());
+        },),
       ),
     );
   }
